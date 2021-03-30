@@ -25,22 +25,30 @@
         font-size: 14px;
         padding: 5px;
         margin: 0 5px;
+        position: relative;
+        top: 10px;
     }
     #about{
         grid-area: about;
     }
+    #about:hover{text-decoration: underline;}
     #store{
         grid-area: store;
     }
+    #store:hover{text-decoration: underline;}
     #gmail{
         grid-area: gmail;
     }
+    #gmail:hover{text-decoration: underline;}
     #images{
         grid-area: images;
     }
+    #images:hover{text-decoration: underline;}
     #sign-in{
         grid-area: sign-in;
     }
+    #sign-in:hover{text-decoration: underline;}
+
     #main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -50,34 +58,114 @@
                              ". buttons .";
     }
     #logo{
+        position: relative;
         grid-area: logo;
         justify-self: center;
-        align-self: bottom;
+        top: 200px;
     }
     #search{
+        position: relative;
         grid-area: search;
+        justify-self: center;
         height: 35px;
+        border-color: lightgray;    
         border-radius: 30px;
-        border-color: grey;
         border-width: 1px;
+        top: 10px;
+        width: 85%;
     }
-    #search-button{
-        grid-area: buttons;
-        height: 25px;
-    }
-    #lucky-button{
-        grid-area: buttons;
-        height: 25px;
-    }
+   #buttons{
+       position: relative;
+       grid-area: buttons;
+       justify-self: center;
+       bottom: 225px;
+   }
+   #search-button{
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        text-align: center;
+        border: none;
+   }
+   #search-button:hover{
+       border: solid;
+       border-width: 1px;
+       border-color: lightgray;
+   }
+   #lucky-button{
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        text-align: center;
+        border: none;
+   }
+   #lucky-button:hover{
+       border: solid;
+       border-width: 1px;
+       border-color: lightgray;
+   }
   
     #footer{
         display: grid;
-        grid-template-columns: 80px 80px 80px 1fr 80px 80px 80px;
+        grid-template-columns: 100px 80px 180px 1fr 80px 80px 80px;
+        background-color: #f2f2f2;
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 2.5rem;
+        color: #70757a;
+        font-size: 14px;
+        font-family: arial, sans-serif;
+        justify-self: center;
+        align-self: center;
     }
+    #adv{
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    #adv:hover{text-decoration: underline;}
+    #business{
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    #business:hover{text-decoration: underline;}
+    #how-search{
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    #how-search:hover{text-decoration: underline;}
+    #carbon{
+        position: relative;
+        justify-self: center;
+        right: 80px;
+        padding-top: 15px;
+    }
+    #carbon:hover{text-decoration: underline;}
+    #privacy{
+        padding-top: 15px;
+    }
+    #privacy:hover{text-decoration: underline;}
+    #terms{
+        padding-top: 15px;
+    }
+    #terms:hover{text-decoration: underline;}
+    #settings{
+        padding-top: 15px;
+        justify-self: left;
+    }
+    #settings:hover{text-decoration: underline;}
 </style>
 
 <!DOCTYPE html>
@@ -98,8 +186,10 @@
         <div id="main">
         <img id="logo" src="googlelogo_272x92dp.png" alt="google logo">
         <input type="text" id="search">
+        <div id="buttons">
         <button id="search-button">Google Search</button>
         <button id="lucky-button">I'm Feeling Lucky</button>
+        </div>
         </div>
 
         <div id="footer">
